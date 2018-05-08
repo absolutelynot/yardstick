@@ -1,0 +1,5 @@
+- hosts: clearwater
+  tasks:
+    - command: bash yardstick_tool/ping.sh 10.16.0.135
+      register: output
+    - debug: var=output.stdout
