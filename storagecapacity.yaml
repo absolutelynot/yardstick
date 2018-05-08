@@ -1,0 +1,5 @@
+- hosts: clearwater
+  tasks:
+    - command: bash yardstick_tool/storagecapacity.sh
+      register: output
+    - debug: var=output.stdout
